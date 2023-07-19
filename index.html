@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BookList.online | Add your books</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-secondary px-5">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">BookList.online</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+        <div id="msg">
+        </div>
+
+      <div class="container my-4 justify-content-center bg-body-tertiary p-4">
+        <h2 class="fw-bold mb-5">Readify | <span class="fw-light">Contribute books</span></h2>
+        <form id="libForm">
+            <div class="row mb-3">
+              <div class="col-sm-10">
+                <input type="text" class="form-control py-2 px-4 placeholder-xs rounded-3" id="bookName" placeholder="Name of the book">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-sm-10">
+                <input type="text" class="form-control py-2 px-4 placeholder-xs rounded-3" id="author" placeholder="Author of the book">
+              </div>
+            </div>
+            <fieldset class="row mb-3">
+              <legend class="col-form-label col-sm-2 pt-0">Type of Book</legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="type" id="fiction" value="Fiction" checked>
+                  <label class="form-check-label" for="fiction">
+                    Fiction
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="type" id="educational" value="Educational">
+                  <label class="form-check-label" for="educational">
+                    Educational
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="type" id="nonFiction" value="Non - Fiction">
+                  <label class="form-check-label" for="nonFiction">
+                    Non - Fiction
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary">AddBook</button>
+          </form>
+
+          <hr>
+
+          <h1 class="fw-light my-lg-4">All books</h1>
+          <table class="table table-success table-borderless table-striped p-2">
+            <thead>
+              <tr>
+                <th scope="col">Book Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Type</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+          </table>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
